@@ -1,0 +1,30 @@
+{
+  "name": "rn-sliding-popup",
+  "version": "1.0.0",
+  "description": "A react native sliding popup with dynamic animation for a dynamic height.",
+  "main": "popup/popup.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sliding",
+    "animated",
+    "popup",
+    "dynamic",
+    "view"
+  ],
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.71.8"
+  },
+  "author": "shelly Ambar",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShellyAmbar/rn-sliding-popup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShellyAmbar/rn-sliding-popup/issues"
+  },
+  "homepage": "https://github.com/ShellyAmbar/rn-sliding-popup#readme"
+}
