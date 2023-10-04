@@ -1,4 +1,11 @@
-import {Animated, View, Modal, Text} from "react-native";
+import {
+  Animated,
+  View,
+  Modal,
+  Text,
+  Pressable,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import Close from "../assets/images/close-small.svg";
 import PopupProps from "./interfaces";
@@ -22,7 +29,7 @@ const Popup = ({
 
   return (
     <Modal visible={isVisible} transparent onRequestClose={animatSlideDown}>
-      <View style={Styles.backdrop} />
+      <Pressable onPress={() => animatSlideDown()} style={Styles.backdrop} />
       <Animated.View
         onLayout={(event) => {
           animatSlideUp(event.nativeEvent.layout.height);
@@ -48,18 +55,15 @@ const Popup = ({
             ) : (
               <View style={Styles.title} />
             )}
-            {onClickClose ? (
-              <View
-                onPress={() => {
-                  animatSlideDown();
-                }}
-                style={Styles.closeButton}
-              >
-                <Close />
-              </View>
-            ) : (
-              <View style={Styles.closeButton} />
-            )}
+
+            <TouchableOpacity
+              onPress={() => {
+                animatSlideDown();
+              }}
+              style={Styles.closeButton}
+            >
+              <Close />
+            </TouchableOpacity>
           </View>
 
           <View style={Styles.content}>{children}</View>

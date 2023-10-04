@@ -1,7 +1,7 @@
-import {TextStyle, ViewProps} from 'react-native';
+import {TextStyle, ViewProps} from "react-native";
 
 export default interface PopupProps extends ViewProps {
-  isVisible:boolean;
+  isVisible: boolean;
   onBackdropPress?: () => void;
   title?: string;
   titleStyle?: TextStyle[] | TextStyle;
@@ -12,6 +12,5 @@ export default interface PopupProps extends ViewProps {
   valueEnter?: number;
   valueExit?: number;
   startValue?: number;
-  onClickClose?: () => void;
+  onClickClose: () => void;
 }
-

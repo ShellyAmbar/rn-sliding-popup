@@ -20,8 +20,9 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   backdrop: {
-    backgroundColor: "rgba(0,0,0,0.3)",
+    backgroundColor: "rgba(0,0,0,0.5)",
     flex: 1,
+    zIndex: 0,
   },
   shadow: {
     shadowColor: "#000",
