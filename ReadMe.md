@@ -4,8 +4,8 @@
 
 # Animated sliding popup:
 
-![Screenshot of a popup: ](./assets/images/popup.png)
-![](./assets/videos/popup.gif)
+![Screenshot of a popup: ](./assets/images/image.png)
+![](./assets/videos/video.gif)
 
 > **Dataset Properties**
 
