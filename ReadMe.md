@@ -2,6 +2,18 @@
 
 - It comes with a built-in TypeScript typings.
 
+# Installation:
+
+```ruby
+npm i rn-sliding-popup
+
+```
+
+```ruby
+yarn add rn-sliding-popup
+
+```
+
 # Animated sliding popup:
 
 ![Screenshot of a popup: ](./assets/images/image.png)
