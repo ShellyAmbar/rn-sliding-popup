@@ -1,6 +1,6 @@
-## RN-Sliding-Popup is a dynamic custom Modal view of React native, with a dynamic height and React native Animated animations.
+- RN-Sliding-Popup is a dynamic custom Modal view of React native, with a dynamic height and React native Animated animations.
 
-### It comes with a built-in TypeScript typings.
+- It comes with a built-in TypeScript typings.
 
 # Animated sliding popup:
 
