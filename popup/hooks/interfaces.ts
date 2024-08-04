@@ -1,5 +1,5 @@
 export default interface usePopupProps {
-  onClickClose: () => void;
+  onClickClose?: () => void;
   durationEnter: number;
   durationExit: number;
 }

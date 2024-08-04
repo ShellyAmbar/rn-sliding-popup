@@ -14,6 +14,12 @@ yarn add rn-sliding-popup
 
 ```
 
+```
+ <Popup isCancelable={true} isVisible={isVisible} onClickClose ={()=> {}}>
+ {...children}
+ </Popup>
+```
+
 # Animated sliding popup:
 
 ![Screenshot of a popup: ](./assets/images/image.png)
@@ -35,3 +41,4 @@ yarn add rn-sliding-popup
 | valueExit       | number                |
 | startValue      | number                |
 | onClickClose    | () => void            |
+| isCancelable    | boolean               |

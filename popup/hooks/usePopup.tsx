@@ -1,10 +1,14 @@
-import {Animated, Dimensions, Platform} from "react-native";
-import React, {useRef} from "react";
+import { Animated, Dimensions, Platform } from "react-native";
+import React, { useRef } from "react";
 import usePopupProps from "./interfaces";
 import AnimationService from "../../services/animation-service";
 import Styles from "../popup.styles";
 
-const usePopup = (props: usePopupProps) => {
+const usePopup = ({
+  onClickClose,
+  durationEnter,
+  durationExit,
+}: usePopupProps) => {
   const slideAnim = useRef(new Animated.Value(0)).current;
 
   let deviceH = Dimensions.get("screen").height;
@@ -14,12 +18,12 @@ const usePopup = (props: usePopupProps) => {
   const animatSlideDown = () => {
     new AnimationService({
       toValue: 0,
-      duration: props.durationEnter,
+      duration: durationEnter,
       useNativeDriver: true,
     })
       .create(slideAnim)
       .start(() => {
-        props.onClickClose && props.onClickClose();
+        onClickClose && onClickClose();
       });
   };
 
@@ -31,7 +35,7 @@ const usePopup = (props: usePopupProps) => {
 
     new AnimationService({
       toValue: finalheight,
-      duration: props.durationExit,
+      duration: durationExit,
       useNativeDriver: true,
     })
       .create(slideAnim)

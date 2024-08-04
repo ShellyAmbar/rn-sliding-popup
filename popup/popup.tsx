@@ -20,8 +20,9 @@ const Popup = ({
   durationEnter = 500,
   durationExit = 500,
   children,
+  isCancelable = true,
 }: PopupProps) => {
-  const {animatSlideDown, animatSlideUp, slideAnim} = usePopup({
+  const { animatSlideDown, animatSlideUp, slideAnim } = usePopup({
     onClickClose,
     durationEnter,
     durationExit,
@@ -29,7 +30,12 @@ const Popup = ({
 
   return (
     <Modal visible={isVisible} transparent onRequestClose={animatSlideDown}>
-      <Pressable onPress={() => animatSlideDown()} style={Styles.backdrop} />
+      <Pressable
+        onPress={() => {
+          isCancelable && animatSlideDown();
+        }}
+        style={Styles.backdrop}
+      />
       <Animated.View
         onLayout={(event) => {
           animatSlideUp(event.nativeEvent.layout.height);
@@ -51,19 +57,21 @@ const Popup = ({
             <View style={Styles.end} />
 
             {title ? (
-              <Text style={{...Styles.title, ...titleStyle}}>{title}</Text>
+              <Text style={{ ...Styles.title, ...titleStyle }}>{title}</Text>
             ) : (
               <View style={Styles.title} />
             )}
 
-            <TouchableOpacity
-              onPress={() => {
-                animatSlideDown();
-              }}
-              style={Styles.closeButton}
-            >
-              <Close />
-            </TouchableOpacity>
+            {isCancelable && (
+              <TouchableOpacity
+                onPress={() => {
+                  animatSlideDown();
+                }}
+                style={Styles.closeButton}
+              >
+                <Close />
+              </TouchableOpacity>
+            )}
           </View>
 
           <View style={Styles.content}>{children}</View>
