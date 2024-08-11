@@ -28,10 +28,7 @@ const usePopup = ({
   };
 
   const animatSlideUp = (height) => {
-    let finalheight =
-      Platform.OS === "ios"
-        ? -height - diff - Styles.content.marginTop
-        : -height - diff;
+    let finalheight = -height - diff;
 
     new AnimationService({
       toValue: finalheight,

@@ -1,6 +1,6 @@
-import {Dimensions, I18nManager, StyleSheet} from "react-native";
+import { Dimensions, I18nManager, StyleSheet } from "react-native";
 
-const {width, height} = Dimensions.get("screen");
+const { width, height } = Dimensions.get("screen");
 export default StyleSheet.create({
   container: {
     justifyContent: "center",
@@ -62,14 +62,10 @@ export default StyleSheet.create({
     paddingBottom: 10,
     paddingHorizontal: 16,
     paddingVertical: 14,
-    position: "absolute",
-    top: 0,
     flexDirection: "row",
   },
   content: {
-    marginTop: 60,
     zIndex: 3,
     width: "100%",
-    paddingTop: 8,
   },
 });
