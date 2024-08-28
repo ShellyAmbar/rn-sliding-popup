@@ -5,9 +5,10 @@ import {
   Text,
   Pressable,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import React from "react";
-import Close from "../assets/images/close-small.svg";
+
 import PopupProps from "./interfaces";
 import Styles from "./popup.styles";
 import usePopup from "./hooks/usePopup";
@@ -22,7 +23,7 @@ const Popup = ({
   children,
   isCancelable = true,
 }: PopupProps) => {
-  const { animatSlideDown, animatSlideUp, slideAnim } = usePopup({
+  const {animatSlideDown, animatSlideUp, slideAnim} = usePopup({
     onClickClose,
     durationEnter,
     durationExit,
@@ -57,7 +58,7 @@ const Popup = ({
             <View style={Styles.end} />
 
             {title ? (
-              <Text style={{ ...Styles.title, ...titleStyle }}>{title}</Text>
+              <Text style={{...Styles.title, ...titleStyle}}>{title}</Text>
             ) : (
               <View style={Styles.title} />
             )}
@@ -69,7 +70,10 @@ const Popup = ({
                 }}
                 style={Styles.closeButton}
               >
-                <Close />
+                <Image
+                  style={Styles.closeButton}
+                  source={require("../assets/images/close.png")}
+                />
               </TouchableOpacity>
             )}
           </View>
