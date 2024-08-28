@@ -1,6 +1,6 @@
-import { Dimensions, I18nManager, StyleSheet } from "react-native";
+import {Dimensions, I18nManager, StyleSheet} from "react-native";
 
-const { width, height } = Dimensions.get("screen");
+const {width, height} = Dimensions.get("screen");
 export default StyleSheet.create({
   container: {
     justifyContent: "center",
@@ -42,6 +42,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  close: {width: 16, height: 16},
   end: {
     alignSelf: "flex-start",
     width: 32,

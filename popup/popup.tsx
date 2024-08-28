@@ -71,7 +71,7 @@ const Popup = ({
                 style={Styles.closeButton}
               >
                 <Image
-                  style={Styles.closeButton}
+                  style={Styles.close}
                   source={require("../assets/images/close.png")}
                 />
               </TouchableOpacity>
